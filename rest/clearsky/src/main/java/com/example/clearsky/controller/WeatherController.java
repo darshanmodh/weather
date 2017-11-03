@@ -24,32 +24,32 @@ public class WeatherController {
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public Weather create(@RequestBody Weather weather) {
-		return null;
+		return service.create(weather);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/cities")
 	public List<String> findAllCities() {
-		return new ArrayList<>();
+		return service.findAllCities();
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/{city}")
 	public Weather getWeatherByCity(@PathVariable("city") String city) {
-		return null;
+		return service.getWeatherByCity(city);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/{city}/{prop}")
 	public Weather getWeatherByCityAndProperty(@PathVariable("city") String city, @PathVariable("prop") String prop) {
-		return null;
+		return service.getWeatherByCityAndProperty(city, prop);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/hourlyavg/{city}")
 	public Weather getHourlyAverage(@PathVariable("city") String city) {
-		return null;
+		return service.getHourlyAverage(city);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/dailyavg/{city}")
 	public Weather getDailyAverage(@PathVariable("city") String city) {
-		return null;
+		return service.getDailyAverage(city);
 	}
 
 }
