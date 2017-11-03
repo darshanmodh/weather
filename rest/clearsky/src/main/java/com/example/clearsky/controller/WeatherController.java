@@ -1,6 +1,5 @@
 package com.example.clearsky.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +12,7 @@ import com.example.clearsky.entity.Weather;
 import com.example.clearsky.service.WeatherService;
 
 @RestController
-@RequestMapping(value = "/clearsky")
+@RequestMapping(value = "/weather")
 public class WeatherController {
 	
 	private WeatherService service;
@@ -38,7 +37,7 @@ public class WeatherController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/{city}/{prop}")
-	public Weather getWeatherByCityAndProperty(@PathVariable("city") String city, @PathVariable("prop") String prop) {
+	public double getWeatherByCityAndProperty(@PathVariable("city") String city, @PathVariable("prop") String prop) {
 		return service.getWeatherByCityAndProperty(city, prop);
 	}
 	

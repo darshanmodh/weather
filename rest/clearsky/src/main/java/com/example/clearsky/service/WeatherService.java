@@ -12,7 +12,7 @@ public interface WeatherService {
 	
 	Weather getWeatherByCity(String city);
 	
-	Weather getWeatherByCityAndProperty(String city, String prop);
+	double getWeatherByCityAndProperty(String city, String prop);
 	
 	Weather getHourlyAverage(String city);
 	
