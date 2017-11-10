@@ -12,3 +12,5 @@
 **/RemoteSystemsTempFiles
 
 **/target/*
+container/clearsky_boot/.project
+rest/clearsky/.project
